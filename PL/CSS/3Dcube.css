@@ -1,0 +1,66 @@
+#avatar {
+    position:absolute;
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 200px;
+    top: 15%;
+    left: 45%;
+    transform: translate(-45%, -45%);
+}
+
+img.cc {
+    
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+
+#full {
+    position:relative;
+} 
+  
+#cube {
+
+    height: 100px;
+    width: 100px;
+    -webkit-transform-style: preserve-3d;
+}
+  
+.face {
+    position: absolute;
+    border: solid;
+    border-color: #000;
+    border-width: 1px;
+    height: 100px;
+    width: 100px;
+    background: radial-gradient(ellipse at top, #e66465, #663830),
+                radial-gradient(ellipse at bottom, #4d9f0c, #435937);
+}
+  
+#cube .one {
+    -webkit-transform: rotateX(90deg) translateZ(50px);
+}
+  
+#cube .two {
+    -webkit-transform: translateZ(50px);
+}
+  
+#cube .three {
+    -webkit-transform: rotateY(90deg) translateZ(50px);
+}
+  
+#cube .four {
+    -webkit-transform: rotateY(180deg) translateZ(50px);
+}
+  
+#cube .five {
+    -webkit-transform: rotateY(-90deg) translateZ(50px);
+}
+  
+#cube .six {
+    -webkit-transform: rotateX(-90deg) translateZ(50px) rotate(180deg);
+}

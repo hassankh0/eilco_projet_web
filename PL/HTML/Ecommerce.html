@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src=../Scripts/3Dcube.js></script>
+        <script src=../Scripts/script.js></script>
+        <script src=../Scripts/ImagesAnimation.js></script>
+        <title>Ecommerce</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="../CSS/3Dcube.css">
+        <link rel="stylesheet" href="../CSS/components.css">
+        <link rel="stylesheet" href="../CSS/ImagesAnimation.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        </style>
+    </head>
+    <body class="content" style="max-width:1600px" onload = 'start()'>
+
+        <div id="progress"></div>
+
+        <!-- Sidebar/menu -->
+        <nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+            <div class="container">
+                <a href="#" onclick="close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+                    <i class="fa fa-remove"></i>
+                </a>
+                <canvas id = 'full' onmousemove='mousePos(event)' onmousedown='mouseDown(event)' onmouseup='mouseUp(event)' ontouchmove='fingerPos(event)' ontouchstart='fingerDown(event)'></canvas>
+                <div id= 'avatar'>
+                    <a href="Agency.html">
+                        <div id= 'cube'>
+                            <img src="https://minio.codingblocks.com/amoeba/1008db10-135f-4b2b-a65a-5eee36be2171.svg" class= 'face one cc' draggable="false">
+                            <img src="https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png" class= 'face two cc' draggable="false">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class= 'face three cc' draggable="false">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class='face four cc' draggable="false">
+                            <img src="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png" class='face five cc' draggable="false">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ17neJbjGh34qWkuGp1sPva9nidDs9iZ5FTUB6fteBJNr_-AHL" class='face six cc' draggable="false">
+                        </div>
+                    </a>
+                </div>
+                <img src="" style="width:45%;" class="round"><br><br>
+                <h4><b>Agency.Yours</b></h4>
+                <p class="text-grey">By Team Tia</p>
+            </div>
+            <div class="bar-block">
+                <a href="#portfolio" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>Agency.Yours</a> 
+                <a href="#about" onclick="close()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a> 
+                <a href="#contact" onclick="close()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
+            </div>
+            <div>
+                <ul class="social-icons" style="left: 0%;position: absolute;">                   
+                    <li> <a class="whatsapp" id="opener">
+                            <i class="fab fa-whatsapp" ></i> </a></li>
+                    <li>
+                        <div class="social-media-container"> <a class="instagram" href="https://www.instagram.com//" target="_blank" title='@'> <i class="fab fa-instagram"></i> </a></div>
+                    </li>                    
+                    <li> <a class="email" href="mailto: info@coder.com" target="_blank" title="info@coder.com"> <i class="far fa-envelope"></i> </a></li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <ul>
+                    <form action="logout.php"><button>Logout</button></form>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="main" style="margin-left:300px">
+
+            <!-- Header -->
+            <header id="portfolio">
+                <a href="#"><img src="" style="width:65px;" class="circle right margin hide-large hover-opacity"></a>
+                <span class="button hide-large xxlarge hover-text-grey" onclick="open()"><i class="fa fa-bars"></i></span>
+                <div class="container">
+                    <div class="text-box"></div>
+                </div>
+            </header> 
+
+            <div id="cycler">
+                <img style="width:100%;" class="active" src="../Images/ecommerce1.png" alt="image" />
+                <img style="width:100%;" src="../Images/ecommerce2.png" alt="image" /> 
+                <img style="width:100%;" src="../Images/ecommerce3.png" alt="image" />   
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <div>
+                <p><strong>WHY DO WE USE MAGENTO?<br></strong><br>
+                    <b class="gradient-h gradient-heading">Magento</b>  is the most popular secured ecommerce platform in the world and our preferred platform.</p>
+                <p><br>Our Complete eCommerce Solution offers a comprehensive suite of tools to take complete control of the look, feel and functionality of your site (web store) and deliver a great online shopping experience to your customers. Behind this lies an exhaustive array of analytical options, providing a deep insight into your customers to help grow online sales and revenue, with tools to attract more traffic, engage shoppers and drive conversions.</p>
+                <p>In addition, our eCommerce solution is designed with SEO (search engine optimization) in mind by generating SEO-friendly URLs, meaningful domain names, a Google sitemap, customized meta keywords, and descriptions, so it’s easy for customers to find your products online.</p>
+                <br>
+                <p><strong>Shopping Cart Development<br></strong>
+                    We help online businesses by building a comprehensive and functional shopping cart that provides a seamless online shopping experience to customers. Ecommerce businesses in Lebanon and the region can boost their online sales with custom-made shopping carts that have an array of options for the convenience of customers.
+                    <br>
+                    We ensure that the shopping cart developed has an SEO (Search Engine Optimization) friendly design, user-friendly navigation and several useful features to draw in more business like social media marketing design. </p>                      
+            </div>
+
+            <div class="container padding-large" style="margin-bottom:32px">
+                <h4><b>About Us</b></h4>
+                <h2>We will <span class="blink" style="color:blue;">enrich</span> <span class="blinkk" style="color:blue;">empower</span> your business in the market.</h2>
+                <hr>
+
+                <h4>Technical Skills</h4>
+                <!-- Progress bars / Skills -->
+                <p>Photography</p>
+                <div class="grey">
+                    <div class="container dark-grey padding center" style="width:95%">95%</div>
+                </div>
+                <p>Web Design</p>
+                <div class="grey">
+                    <div class="container dark-grey padding center" style="width:85%">85%</div>
+                </div>
+                <p>Photoshop</p>
+                <div class="grey">
+                    <div class="container dark-grey padding center" style="width:80%">80%</div>
+                </div>
+                <p><form action="downloadresume.php">
+                    <button class="button dark-grey padding-large margin-top margin-bottom">
+                        <i class="fa fa-download margin-right"></i>Download Resume
+                    </button></form>
+                </p>
+                <hr>
+            </div> 
+
+            <!-- Contact Section -->
+            <div class="container padding-large grey">
+                <h4 id="contact"><b>Contact Us</b></h4>
+                <!-- slider start-->
+                <form id="contact" action="uploadfile.php" method="post" enctype="multipart/form-data">
+                    <section id="content">
+                        <h1>What is your budget?</h1>
+                        <div class="cube">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div id="slider-range-min"></div>
+                        </div>
+                        <input type="text" id="amount" name="budget"/>
+                    </section>
+                    <!-- end of slider-->
+                    <hr class="opacity">
+                    <div class="section">
+                        <label>Title</label>
+                        <br>
+                        <input name="title" required>
+                        <br>
+                        <label>Message</label>
+                        <textarea class="input border" id="contact_message" name="Message" cols="70" rows="10" maxlength="10000"required></textarea>
+                        <span class="error_hide" id="errorMessage">This field is required</span>
+                    </div>
+                    <div>
+                        <input type="file" name="fileToUpload" id="fileToUpload" class="button black margin-bottom fa  margin-right"></input>
+                    </div>
+                    <button id="contact_submit" type="submit" class="button black margin-bottom" value="Upload Image" name="submit"><i class="fa fa-paper-plane margin-right"></i>Send Message</button>
+                </form>
+            </div>
+
+            <!--Footer Start-->
+            <footer class="site-footer fixed">
+                <div id="dialog" title="Contact Us via Whatsapp">
+                    <p><a href='https://wa.me/96176057676' target='_blank'>+96176057676</a><br/><a href='https://wa.me/96176785942' target='_blank'>+96176785942</a><br/><a href='https://wa.me/96178928501' target='_blank'>+96178928501</a><br/><a href='https://wa.me/9613730058' target='_blank'>+9613730058</a></p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 col-xs-12 copyright-div">
+                            <p class="copyright-text"><span class="brand-name">AGENCY.YOURS</span><br>Beirut, Lebanon</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <ul class="social-icons">                   
+                                <li> <a class="whatsapp" id="opener">
+                                        <i class="fab fa-whatsapp" ></i> </a></li>
+                                <li>
+                                    <div class="social-media-container"> <a class="instagram" href="https://www.instagram.com//" target="_blank" title='@'> <i class="fab fa-instagram"></i> </a></div>
+                                </li>                    
+                                <li> <a class="email" href="mailto: info@coder.com" target="_blank" title="info@coder.com"> <i class="far fa-envelope"></i> </a></li>
+                            </ul>
+                            <br>
+                            <br>
+                            <br>
+                            <ul>
+                                <form action="joinus.php"><button>Join Us</button></form>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--Footer End-->
+
+
+            <div class="black center padding-24">Powered by <a href="" title="Team Tia" target="_blank" class="hover-opacity">Team Tia</a></div>
+
+            <!-- End page content -->
+        </div>
+    </body>
+</html>
+
+<script>
+    /* ===================================
+     message validation
+     ====================================== */
+    $(document).ready(function () {
+        textEffect("Ecommerce");
+        var errors = false;
+        $('#contact_message').keyup(function () {
+            var input = $(this);
+
+            if (input.val() !== "")
+            {
+                input.removeClass("invalid").addClass("valid");
+                $("#errorMessage").removeClass("error").addClass("error_hide");
+                errors = true;
+            } else
+            {
+                input.removeClass("valid").addClass("invalid");
+                errors = false;
+                $("#errorMessage").removeClass("error_hide").addClass("error");
+            }
+
+        });
+        $("#contact_submit").click(function (event)
+        {
+            if (!errors)
+            {
+                alert("Fields are missing or invalid");
+                event.preventDefault();
+            } else {
+                alert("Submitted");
+            }
+        });
+    });
+// Script to open and close sidebar
+    function open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
